@@ -230,7 +230,7 @@ function deleteEventDataLocally(id) {
             console.log(ddd)
             const tx = db.transaction('events', 'readwrite');
             const store = tx.objectStore('events');
-            var request = store.delete(id);
+            var request = store.delete(1513934230999);
             console.log(id,"id")
             // return Promise.all(events.map(event => store.put(event)))
             // .catch(() => {
@@ -238,7 +238,7 @@ function deleteEventDataLocally(id) {
             //   throw Error('Events were not added to the store');
             // });
             request.onerror = function(event) {
-              console.log(event)
+              console.log(event,"err")
               // 错误处理!
             };
             request.onsuccess = function(event) {
